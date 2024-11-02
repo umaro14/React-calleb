@@ -1,4 +1,9 @@
-import { useState, useEffect } from 'react';
+console.log('useParams:', useParams());
+console.log('useNavigate:', useNavigate());
+console.log('useState word:', word);
+console.log('useState notFound:', notFound);
+console.log('useState error:', error);
+console.log('search:', search);import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import DefinitionSearch from '../components/DefinitionSearch';
@@ -12,7 +17,7 @@ export default function Definition() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        //const url = 'https://dlfkgjdflkgjdflkgjdflkgjdflkgjdflkgjdflkg.com';
+        //bla bla .....const url = 'https://dlfkgjdflkgjdflkgjdflkgjdflkgjdflkgjdflkg.com';
         const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/' + search;
         fetch(url)
             .then((response) => {
